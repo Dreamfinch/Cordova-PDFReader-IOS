@@ -83,9 +83,6 @@
 		UIFont *doneButtonFont = [UIFont systemFontOfSize:BUTTON_FONT_SIZE];
 		NSString *doneButtonText = [ReaderLanguage get:@"Done"];
 		
-		// CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
-		// CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
-		
 		NSMutableParagraphStyle *pg = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
 		pg.lineBreakMode = NSLineBreakByWordWrapping;
 		CGRect doneButtonSize = [doneButtonText boundingRectWithSize:CGSizeMake(500.0f, 500.0f) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName: doneButtonFont, NSParagraphStyleAttributeName: pg } context:nil];
